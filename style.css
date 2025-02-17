@@ -1,82 +1,29 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-
-/* Yleiset tyylit */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
+.projects ul {
+    list-style-type: none; /* Poistaa pisteet listasta */
     padding: 0;
-    background: linear-gradient(135deg, #2b5876, #4e4376);
-    color: #fff;
-    text-align: center;
 }
 
-/* Header */
-header {
-    padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
-/* Projektit */
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px auto;
-    max-width: 1000px;
-}
-
-.project {
+.projects li {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 15px;
-    width: 300px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.3s ease;
 }
 
-.project:hover {
-    transform: translateY(-5px);
+.projects li:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Linkit */
-a {
-    color: #ffcc00;
+.projects a {
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
+    color: #ffcc00;
+    font-weight: bold;
+    display: block;
 }
 
-a:hover {
+.projects a:hover {
     color: #ffeb99;
-}
-
-/* Responsiivisuus */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .projects {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project {
-        width: 90%;
-    }
 }
