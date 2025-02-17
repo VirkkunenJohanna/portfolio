@@ -10,19 +10,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #2b5876, #4e4376);
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
     color: #fff;
     text-align: center;
     padding: 20px;
 }
 
-/* Header-tyylit */
+/* Header */
 header {
     background: rgba(255, 255, 255, 0.1);
-    padding: 40px;
+    padding: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
@@ -35,7 +36,7 @@ p {
     opacity: 0.9;
 }
 
-/* Projektiosio */
+/* Projekti-osio */
 .projects {
     margin-top: 40px;
     display: flex;
@@ -47,20 +48,27 @@ p {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     margin: 15px;
-    width: 300px;
+    width: 320px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.6s ease-out;
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .project h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    opacity: 0.8;
 }
 
 .project a {
@@ -69,39 +77,40 @@ p {
     font-weight: bold;
     display: block;
     margin-top: 10px;
+    transition: color 0.3s ease;
 }
 
 .project a:hover {
     color: #ffeb99;
 }
 
-/* Projektien lista */
-.projects ul {
-    list-style: none;
-    padding: 0;
-}
-
-.projects li {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 12px;
-    margin: 10px auto;
-    max-width: 400px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-.projects li:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.projects a {
-    text-decoration: none;
-    color: #ffcc00;
+/* Nappi */
+.button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #1e1e2f;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 25px;
     font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.projects a:hover {
-    color: #ffeb99;
+.button:hover {
+    background: #ffeb99;
+    transform: scale(1.05);
+}
+
+/* Animaatiot */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsiivisuus */
