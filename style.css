@@ -36,6 +36,20 @@ p {
     opacity: 0.9;
 }
 
+/* Kategoriat */
+.project-category {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.project-category h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
 /* Projekti-osio */
 .projects {
     margin-top: 40px;
@@ -62,6 +76,11 @@ p {
 }
 
 .project h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.project h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
 }
